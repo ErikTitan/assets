@@ -28,7 +28,7 @@ import HubletoTableColumnCustomize from "@hubleto/react-ui/ext/HubletoTableColum
 // Primereact
 import { Tooltip } from "primereact/tooltip";
 
-class HubletoMain extends HubletoReactUi {
+class HubletoErp extends HubletoReactUi {
   language: string = 'en';
   idUser: number = 0;
   isPremium: boolean = false;
@@ -216,7 +216,7 @@ class HubletoMain extends HubletoReactUi {
 }
 
 //@ts-ignore
-const main: HubletoMain = new HubletoMain(window.ConfigEnv);
+const main: HubletoErp = new HubletoErp(window.ConfigEnv);
 
 globalThis.main = main;
 
