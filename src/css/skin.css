@@ -214,7 +214,7 @@
   .modal > .modal-inner > .modal-header .btn .text { @apply hidden md:flex }
   .modal > .modal-inner > .modal-top-menu { @apply flex w-full justify-between border-gray-100 mb-2 bg-white border-b border-b-primary/20; }
   .modal > .modal-inner > .modal-top-menu > div > .btn { @apply p-1 border-none rounded-none shadow-none; }
-  .modal > .modal-inner > .modal-body { @apply flex p-2 flex-1 overflow-y-auto relative; }
+  .modal > .modal-inner > .modal-body { @apply p-2 flex-1 overflow-y-auto relative; }
   .modal > .modal-inner > .modal-footer { @apply flex gap-2 p-2 border-t border-t-gray-200 bg-gray-50 dark:bg-slate-900 dark:border-slate-800; }
 
   .modal.theme-secondary { @apply border-secondary; }

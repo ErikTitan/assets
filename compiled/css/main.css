@@ -7149,7 +7149,6 @@ body.ajax-loading #logo {
   }
   .modal > .modal-inner > .modal-body {
     position: relative;
-    display: flex;
     flex: 1;
     overflow-y: auto;
     padding: calc(var(--spacing) * 2);
