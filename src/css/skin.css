@@ -184,7 +184,7 @@
   .key-value-table > div div:nth-child(2) { @apply font-bold; }
 
   .modal { @apply flex flex-col h-screen w-full overflow-auto bg-white dark:bg-gray-950; }
-  .modal.right { @apply max-w-[100vw] max-h-[100vh] fixed left-0 bottom-0 rounded md:left-auto md:right-0 md:w-1/2 z-50 shadow-2xl border-t border-t-primary border-l border-primary dark:border-slate-800 dark:shadow-black; height: calc(100vh - 2em); }
+  .modal.right { @apply max-w-[100vw] max-h-[100vh] fixed left-0 bottom-0 rounded md:left-auto md:right-0 md:w-1/2 !md:h-full z-50 shadow-2xl border-t border-t-primary border-l border-primary dark:border-slate-800 dark:shadow-black; height: calc(100vh - 2em); }
   .modal.right.wide { @apply md:w-[80%]; }
   .modal.right.wider { @apply md:w-[90vw]; }
 
