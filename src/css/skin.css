@@ -169,7 +169,7 @@
   .form .form-footer { @apply p-2 border-t border-t-slate-200 bg-gray-50; }
 
   .input-wrapper { @apply relative justify-between items-center border border-transparent rounded-sm p-1 hover:bg-gray-50 dark:hover:bg-white/10; box-sizing: border-box; }
-  .input-wrapper .input-label { @apply flex-1 block text-sm text-gray-400; }
+  .input-wrapper .input-label { @apply block text-sm text-gray-400; }
   .input-wrapper.required { @apply before:absolute before:content-['*'] before:text-red-600; }
   .input-wrapper.required .input-label { @apply pl-3; }
   .input-wrapper .input-body { @apply flex items-center flex-[2]; overflow-wrap: anywhere; }
@@ -184,9 +184,9 @@
   .key-value-table > div div:nth-child(2) { @apply font-bold; }
 
   .modal { @apply flex flex-col h-screen w-full overflow-auto bg-white dark:bg-gray-950; }
-  .modal.right { @apply max-w-[100vw] max-h-[100vh] fixed left-0 bottom-0 rounded md:left-auto md:right-0 md:w-1/2 !md:h-full z-50 shadow-2xl border-t border-t-primary border-l border-primary dark:border-slate-800 dark:shadow-black; height: calc(100vh - 2em); }
+  .modal.right { @apply max-w-[100vw] max-h-[100vh] fixed left-0 bottom-0 rounded md:left-auto md:right-0 md:w-1/2 z-50 shadow-2xl border-t border-t-primary border-l border-primary dark:border-slate-800 dark:shadow-black; }
   .modal.right.wide { @apply md:w-[80%]; }
-  .modal.right.wider { @apply md:w-[90vw]; }
+  .modal.right.wider { @apply md:w-[93%]; }
 
   .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 4em); }
   .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 6em); }
@@ -212,7 +212,7 @@
   .modal > .modal-inner > .modal-header > .modal-header-right { @apply flex grow-1 gap-1 justify-end; }
   .modal > .modal-inner > .modal-header .btn { @apply flex-nowrap }
   .modal > .modal-inner > .modal-header .btn .text { @apply hidden md:flex }
-  .modal > .modal-inner > .modal-top-menu { @apply flex w-full justify-between border-gray-100 mb-2 bg-white border-b border-b-primary/20; }
+  .modal > .modal-inner > .modal-top-menu { @apply flex w-full items-center justify-between border-gray-100 mb-2 bg-white border-b border-b-primary/20; }
   .modal > .modal-inner > .modal-top-menu > div > .btn { @apply p-1 border-none rounded-none shadow-none; }
   .modal > .modal-inner > .modal-body { @apply p-2 flex-1 overflow-y-auto relative; }
   .modal > .modal-inner > .modal-footer { @apply flex gap-2 p-2 border-t border-t-gray-200 bg-gray-50 dark:bg-slate-900 dark:border-slate-800; }
