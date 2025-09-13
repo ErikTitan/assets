@@ -127,7 +127,7 @@
 
   .card { @apply flex flex-col border border-solid border-slate-200 rounded shadow hover:shadow-lg dark:bg-gray-900 dark:border-gray-800 dark:text-white; }
   .card.card-horizontal { @apply flex flex-row; }
-  .card-header { @apply flex justify-between items-center text-lg border-b border-slate-200 p-2 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:border-gray-700 dark:text-white; }
+  .card-header { @apply flex justify-between items-center font-bold bg-gray-50 p-2 text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white; }
   .card.card-horizontal .card-header { @apply border-none; }
   .card-header-buttons { @apply -m-4; }
   .card-header-buttons .btn { @apply font-normal p-4 border-none rounded-none; }
@@ -136,6 +136,20 @@
   .card-header small { @apply font-normal; }
   .card-body { @apply p-2 flex-1; }
   .card-footer { @apply flex justify-between border-t border-slate-200 p-4 gap-2; }
+
+  .card.card-info .card-header { @apply text-blue-800 bg-blue-50; }
+  .card.card-danger .card-header { @apply text-red-800 bg-red-50; }
+  .card.card-success .card-header { @apply text-green-800 bg-green-50; }
+  .card.card-warning .card-header { @apply text-yellow-800 bg-yellow-50; }
+  .card.card-danger .card-header { @apply text-red-800 bg-red-50; }
+  .card.card-primary .card-header { @apply text-primary bg-primary/20; }
+  .card.card-secondary .card-header { @apply text-secondary bg-secondary/20; }
+  .card.card-blue .card-header { @apply text-blue-800 bg-blue-100; }
+  .card.card-green .card-header { @apply text-green-800 bg-green-100; }
+  .card.card-red .card-header { @apply text-red-800 bg-red-100; }
+  .card.card-yellow .card-header { @apply text-yellow-800 bg-yellow-100; }
+  .card.card-lime .card-header { @apply text-lime-800 bg-lime-100; }
+  .card.card-violet .card-header { @apply text-violet-800 bg-violet-100; }
 
   .dialog { @apply rounded bg-white; }
   .dialog-header { @apply !p-4 !text-base; }

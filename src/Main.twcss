@@ -76,8 +76,6 @@
   .btn-square .icon { @apply flex justify-center h-12; }
   .btn-square .text { @apply h-auto; }
 
-  .card-header { @apply bg-white; }
-
   .modal-header-title h2 { @apply dark:text-white; }
 
   .fc .fc-toolbar-title { @apply !text-base; }

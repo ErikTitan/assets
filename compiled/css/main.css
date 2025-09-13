@@ -627,6 +627,9 @@
   .ml-8 {
     margin-left: calc(var(--spacing) * 8);
   }
+  .ml-12 {
+    margin-left: calc(var(--spacing) * 12);
+  }
   .ml-\[-0\.75rem\] {
     margin-left: -0.75rem;
   }
@@ -982,8 +985,20 @@
   .w-px {
     width: 1px;
   }
+  .max-w-32 {
+    max-width: calc(var(--spacing) * 32);
+  }
+  .max-w-36 {
+    max-width: calc(var(--spacing) * 36);
+  }
+  .max-w-40 {
+    max-width: calc(var(--spacing) * 40);
+  }
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
+  }
+  .max-w-64 {
+    max-width: calc(var(--spacing) * 64);
   }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
@@ -2039,6 +2054,9 @@
   }
   .pl-9 {
     padding-left: calc(var(--spacing) * 9);
+  }
+  .pl-12 {
+    padding-left: calc(var(--spacing) * 12);
   }
   .pl-14 {
     padding-left: calc(var(--spacing) * 14);
@@ -6534,14 +6552,11 @@ body.ajax-loading #logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-    border-color: var(--color-slate-200);
-    background-color: var(--color-gray-100);
+    background-color: var(--color-gray-50);
     padding: calc(var(--spacing) * 2);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-    color: var(--color-gray-800);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-700);
     &:where(.dark, .dark *) {
       border-color: var(--color-gray-700);
     }
@@ -6591,6 +6606,64 @@ body.ajax-loading #logo {
     border-top-width: 1px;
     border-color: var(--color-slate-200);
     padding: calc(var(--spacing) * 4);
+  }
+  .card.card-info .card-header {
+    background-color: var(--color-blue-50);
+    color: var(--color-blue-800);
+  }
+  .card.card-danger .card-header {
+    background-color: var(--color-red-50);
+    color: var(--color-red-800);
+  }
+  .card.card-success .card-header {
+    background-color: var(--color-green-50);
+    color: var(--color-green-800);
+  }
+  .card.card-warning .card-header {
+    background-color: var(--color-yellow-50);
+    color: var(--color-yellow-800);
+  }
+  .card.card-danger .card-header {
+    background-color: var(--color-red-50);
+    color: var(--color-red-800);
+  }
+  .card.card-primary .card-header {
+    background-color: color-mix(in srgb, #4780bf 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    }
+    color: var(--color-primary);
+  }
+  .card.card-secondary .card-header {
+    background-color: color-mix(in srgb, #41c50d 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-secondary) 20%, transparent);
+    }
+    color: var(--color-secondary);
+  }
+  .card.card-blue .card-header {
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-800);
+  }
+  .card.card-green .card-header {
+    background-color: var(--color-green-100);
+    color: var(--color-green-800);
+  }
+  .card.card-red .card-header {
+    background-color: var(--color-red-100);
+    color: var(--color-red-800);
+  }
+  .card.card-yellow .card-header {
+    background-color: var(--color-yellow-100);
+    color: var(--color-yellow-800);
+  }
+  .card.card-lime .card-header {
+    background-color: var(--color-lime-100);
+    color: var(--color-lime-800);
+  }
+  .card.card-violet .card-header {
+    background-color: var(--color-violet-100);
+    color: var(--color-violet-800);
   }
   .dialog {
     border-radius: 0.25rem;
@@ -15577,9 +15650,6 @@ body.ajax-loading #logo {
   }
   .btn-square .text {
     height: auto;
-  }
-  .card-header {
-    background-color: var(--color-white);
   }
   .modal-header-title h2 {
     &:where(.dark, .dark *) {
