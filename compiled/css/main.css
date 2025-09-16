@@ -931,9 +931,6 @@
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
-  .w-72 {
-    width: calc(var(--spacing) * 72);
-  }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
@@ -985,20 +982,11 @@
   .w-px {
     width: 1px;
   }
-  .max-w-20 {
-    max-width: calc(var(--spacing) * 20);
-  }
   .max-w-40 {
     max-width: calc(var(--spacing) * 40);
   }
-  .max-w-48 {
-    max-width: calc(var(--spacing) * 48);
-  }
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
-  }
-  .max-w-64 {
-    max-width: calc(var(--spacing) * 64);
   }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
@@ -5707,7 +5695,7 @@ body.ajax-loading #logo {
   .btn {
     margin: calc(var(--spacing) * 0);
     display: inline-flex;
-    min-height: calc(var(--spacing) * 8);
+    min-height: calc(var(--spacing) * 4);
     cursor: pointer;
     align-items: center;
     border-radius: 0.25rem;
@@ -7205,7 +7193,6 @@ body.ajax-loading #logo {
     margin-bottom: calc(var(--spacing) * 2);
     display: flex;
     width: 100%;
-    align-items: center;
     justify-content: space-between;
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
