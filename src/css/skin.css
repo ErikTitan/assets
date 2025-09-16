@@ -184,6 +184,7 @@
 
   .input-wrapper { @apply relative justify-between items-center border border-transparent rounded-sm p-1 hover:bg-gray-50 dark:hover:bg-white/10; box-sizing: border-box; }
   .input-wrapper .input-label { @apply block text-sm text-gray-400; }
+  .input-wrapper.modified .input-label { @apply text-yellow-600; }
   .input-wrapper.required { @apply before:absolute before:content-['*'] before:text-red-600; }
   .input-wrapper.required .input-label { @apply pl-3; }
   .input-wrapper .input-body { @apply flex items-center flex-[2]; overflow-wrap: anywhere; }

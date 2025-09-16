@@ -6856,6 +6856,9 @@ body.ajax-loading #logo {
     line-height: var(--tw-leading, var(--text-sm--line-height));
     color: var(--color-gray-400);
   }
+  .input-wrapper.modified .input-label {
+    color: var(--color-yellow-600);
+  }
   .input-wrapper.required {
     &::before {
       content: var(--tw-content);
