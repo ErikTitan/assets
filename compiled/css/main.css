@@ -1259,14 +1259,8 @@
   .appearance-none {
     appearance: none;
   }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -3696,11 +3690,6 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:grid-cols-3 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-4 {
@@ -6953,18 +6942,14 @@ body.ajax-loading #logo {
   }
   .modal.right {
     position: fixed;
-    bottom: calc(var(--spacing) * 0);
+    top: calc(var(--spacing) * 0);
     left: calc(var(--spacing) * 0);
     z-index: 50;
-    max-height: 100vh;
+    max-height: 100%;
     max-width: 100vw;
-    border-radius: 0.25rem;
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
     border-color: var(--color-primary);
-    border-top-color: var(--color-primary);
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     @media (width >= 48rem) {
