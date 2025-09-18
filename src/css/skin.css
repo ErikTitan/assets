@@ -203,14 +203,16 @@
   .modal.right.wide { @apply md:w-[80%]; }
   .modal.right.wider { @apply md:w-[93%]; }
 
-  .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 4em); }
-  .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 6em); }
-  .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 8em); }
-  .modal.right .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 10em); }
-  .modal.right .modal.right .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 12em); }
+  .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 4em); top: 4em; }
+  .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 6em); top: 6em; }
+  .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 8em); top: 8em; }
+  .modal.right .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 10em); top: 10em; }
+  .modal.right .modal.right .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 12em); top: 12em; }
 
-  .modal.right.wide .modal.right.wide { @apply md:w-[80%]; }
+  .modal.right.wide .modal.right.wide { @apply !shadow-2xl md:w-[76%]; }
   
+  .modal.right .modal.right .modal-header { @apply bg-primary/10; }
+
   .modal.centered { @apply fixed mx-auto md:my-4 md:w-2/3 md:h-[calc(100vh-theme(space.8))] z-50 shadow-2xl rounded border border-primary dark:border-slate-800; top: 0; left: 50%; transform: translate(-50%, 0%);}
   .modal.centered.large { @apply md:w-[90vw] md:h-[90vh];}
   .modal.centered.small { @apply fixed mx-auto mt-1 md:w-1/2 md:h-2/3 z-50 shadow-xl; top: 50%; left: 50%; transform: translate(-50%, -50%);}
