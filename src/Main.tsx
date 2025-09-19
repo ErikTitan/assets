@@ -83,6 +83,7 @@ class HubletoErp extends HubletoReactUi {
 
     if (this.dictionary === null) return orig;
 
+    //@ts-ignore
     context = context.replaceAll('\\', '-').toLowerCase();
 
     if (
@@ -94,7 +95,7 @@ class HubletoErp extends HubletoReactUi {
       translated = this.dictionary[context][contextInner][orig] ?? '';
     } else {
       translated = '';
-      // this.addToDictionary(orig, context);
+      this.addToDictionary(orig, context, contextInner);
     }
 
     // if (this.dictionary[context] && this.dictionary[context][orig]) {
@@ -121,12 +122,16 @@ class HubletoErp extends HubletoReactUi {
     this.dictionary = globalThis.dictionary;
   }
 
-  addToDictionary(orig: string, context: string) {
+  addToDictionary(orig: string, context: string, contextInner: string) {
     request.get(
       'api/dictionary',
       {
         language: this.language,
-        addNew: { orig: orig, context: context }
+        addNew: {
+          orig: orig,
+          context: context,
+          contextInner: contextInner,
+        }
       },
     );
   }
