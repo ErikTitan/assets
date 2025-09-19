@@ -43,7 +43,8 @@ class HubletoErp extends HubletoReactUi {
     this.idUser = config['idUser'];
     this.isPremium = config['isPremium'];
     this.language = config['language'];
-    this.loadDictionary(config['language']);
+    this.dictionary = globalThis.dictionary;
+    // this.loadDictionary(config['language']);
 
     this.registerReactComponent('Modal', Modal);
 
@@ -77,44 +78,47 @@ class HubletoErp extends HubletoReactUi {
     }
   }
 
-  translate(orig: string, context?: string): string {
+  translate(orig: string, context?: string, contextInner?: string): string {
     let translated: string = orig;
-
-    let tmp = (context ?? '').split('::');
-    const contextClass = tmp[0];
-    const contextInner = tmp[1];
 
     if (this.dictionary === null) return orig;
 
+    context = context.replaceAll('\\', '-').toLowerCase();
+
     if (
-      this.dictionary[contextClass]
-      && this.dictionary[contextClass][contextInner]
-      && this.dictionary[contextClass][contextInner][orig]
-      && this.dictionary[contextClass][contextInner][orig] != ''
+      this.dictionary[context]
+      && this.dictionary[context][contextInner]
+      && this.dictionary[context][contextInner][orig]
+      && this.dictionary[context][contextInner][orig] != ''
     ) {
-      translated = this.dictionary[contextClass][contextInner][orig] ?? '';
+      translated = this.dictionary[context][contextInner][orig] ?? '';
     } else {
       translated = '';
-      this.addToDictionary(orig, context);
+      // this.addToDictionary(orig, context);
     }
 
-    if (translated == '') translated = context + '#' + orig;
+    // if (this.dictionary[context] && this.dictionary[context][orig]) {
+    //   translated = this.dictionary[context][orig] ?? '';
+    // }
+
+    if (translated == '') translated = context + ',' + contextInner + '#' + orig;
 
     return translated;
   }
 
   loadDictionary(language: string) {
-    if (language == 'en') return;
+    // if (language == 'en') return;
 
-    this.language = language;
+    // this.language = language;
 
-    request.get(
-      'api/dictionary',
-      { language: language },
-      (data: any) => {
-        this.dictionary = data;
-      }
-    );
+    // request.get(
+    //   'api/dictionary',
+    //   { language: language },
+    //   (data: any) => {
+    //     this.dictionary = data;
+    //   }
+    // );
+    this.dictionary = globalThis.dictionary;
   }
 
   addToDictionary(orig: string, context: string) {
