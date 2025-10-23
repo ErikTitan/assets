@@ -255,6 +255,7 @@
   .table-default.dense > tbody > tr > th { @apply px-1 py-1; }
   .table-default.dense > tbody > tr > td { @apply px-1 py-1; }
 
+  .table-default.not-striped > tbody > tr { @apply !bg-white; }
 
   .hubleto-lookup[class*='-container'] { width: 100%; }
   .hubleto-lookup *[class*='-indicator'] { padding: 0px !important; }
