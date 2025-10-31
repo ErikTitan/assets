@@ -17,6 +17,7 @@ import InputHyperlink from "@hubleto/react-ui/core/Inputs/Hyperlink";
 import InputUserSelect from "@hubleto/react-ui/core/Inputs/UserSelect";
 import InputWysiwyg from "@hubleto/react-ui/core/Inputs/Wysiwyg";
 import InputTextareaWithHtmlPreview from "@hubleto/react-ui/core/Inputs/TextareaWithHtmlPreview";
+import InputJsonKeyValue from "@hubleto/react-ui/core/Inputs/JsonKeyValue";
 
 import TableCellRendererHyperlink from "@hubleto/react-ui/core/TableCellRenderers/Hyperlink";
 
@@ -61,6 +62,7 @@ class HubletoErp extends HubletoReactUi {
     this.registerReactComponent('InputUserSelect', InputUserSelect);
     this.registerReactComponent('InputWysiwyg', InputWysiwyg);
     this.registerReactComponent('InputTextareaWithHtmlPreview', InputTextareaWithHtmlPreview);
+    this.registerReactComponent('InputJsonKeyValue', InputJsonKeyValue);
 
     this.registerReactComponent('TableCellRendererHyperlink', TableCellRendererHyperlink);
 
