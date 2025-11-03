@@ -7046,6 +7046,12 @@ body.ajax-loading #logo {
       background-color: var(--color-gray-950);
     }
   }
+  .modal.fullscreen {
+    top: calc(var(--spacing) * 0) !important;
+    left: calc(var(--spacing) * 0) !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
   .modal.right {
     position: fixed;
     top: calc(var(--spacing) * 0);
