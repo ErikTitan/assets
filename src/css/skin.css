@@ -111,9 +111,9 @@
   .btn.btn-dropdown { @apply items-baseline relative; }
   .btn.btn-dropdown > .menu { @apply cursor-default invisible absolute bg-white shadow-lg; left: 0%; top: 110%; z-index: 1; }
   .btn.btn-dropdown > .menu > .list { @apply divide-none mt-1 bg-white shadow-xl rounded absolute; }
-  .btn.btn-dropdown:focus { @apply bg-gray-100 text-gray-800 border-gray-100; }
-  .btn.btn-dropdown:focus > .menu { @apply visible; }
-  .btn.btn-dropdown:focus > .menu > .list .btn { @apply text-nowrap; }
+  .btn.btn-dropdown.open { @apply !bg-gray-100 !text-gray-800 !border-gray-100; }
+  .btn.btn-dropdown.open > .menu { @apply !visible; }
+  .btn.btn-dropdown.open > .menu > .list .btn { @apply !text-nowrap; }
 
   .btn-group { @apply flex divide-x rounded border border-gray-100 dark:border-gray-600; }
   .btn-group.vertical { @apply flex-col divide-y; }
