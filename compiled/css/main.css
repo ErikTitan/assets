@@ -984,6 +984,9 @@
   .w-px {
     width: 1px;
   }
+  .max-w-12 {
+    max-width: calc(var(--spacing) * 12);
+  }
   .max-w-40 {
     max-width: calc(var(--spacing) * 40);
   }
