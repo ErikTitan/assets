@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, primereact, hubleto-framework, utilities, hubleto-main;
 @layer theme, base, components, utilities;
@@ -490,6 +490,12 @@
   .m-4 {
     margin: calc(var(--spacing) * 4);
   }
+  .m-8 {
+    margin: calc(var(--spacing) * 8);
+  }
+  .m-12 {
+    margin: calc(var(--spacing) * 12);
+  }
   .m-\[0\.143rem\] {
     margin: 0.143rem;
   }
@@ -824,6 +830,9 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .max-h-32 {
+    max-height: calc(var(--spacing) * 32);
+  }
   .max-h-40 {
     max-height: calc(var(--spacing) * 40);
   }
@@ -989,8 +998,8 @@
   .w-px {
     width: 1px;
   }
-  .max-w-12 {
-    max-width: calc(var(--spacing) * 12);
+  .max-w-32 {
+    max-width: calc(var(--spacing) * 32);
   }
   .max-w-40 {
     max-width: calc(var(--spacing) * 40);
@@ -1611,14 +1620,14 @@
   .border-blue-50 {
     border-color: var(--color-blue-50);
   }
-  .border-blue-100 {
-    border-color: var(--color-blue-100);
-  }
   .border-blue-500 {
     border-color: var(--color-blue-500);
   }
   .border-blue-800 {
     border-color: var(--color-blue-800);
+  }
+  .border-gray-50 {
+    border-color: var(--color-gray-50);
   }
   .border-gray-100 {
     border-color: var(--color-gray-100);
@@ -1644,14 +1653,8 @@
   .border-inherit {
     border-color: inherit;
   }
-  .border-lime-100 {
-    border-color: var(--color-lime-100);
-  }
   .border-lime-300 {
     border-color: var(--color-lime-300);
-  }
-  .border-lime-600 {
-    border-color: var(--color-lime-600);
   }
   .border-orange-500 {
     border-color: var(--color-orange-500);
