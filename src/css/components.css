@@ -9,7 +9,7 @@
   .hubleto.component.table .table-header-title { @apply flex-1 text-left text-primary text-center text-2xl mr-2 dark:text-white; }
   .hubleto.component.table .table-header-right { @apply flex flex-1 text-center gap-1 justify-end; }
   .hubleto.component.table .table-header-search { @apply flex flex-4 gap-2 w-full p-1 border-slate-200 rounded-none dark:border-slate-600 dark:bg-slate-950; }
-  .hubleto.component.table .table-header-search.active { @apply bg-yellow-50; }
+  .hubleto.component.table .table-header-search.active { @apply bg-yellow-50 dark:bg-primary dark:text-white; }
   /* .hubleto.component.table .table-body { @apply border border-slate-200 dark:border-none; } */
   .hubleto.component.table .table-body tr { @apply border border-transparent divide-x hover:bg-gray-100; box-sizing: border-box; }
   .hubleto.component.table .table-body tr:hover td { @apply bg-gray-100 dark:bg-slate-800; }
@@ -42,7 +42,7 @@
   .hubleto.component.table .column-search .input-element { @apply bg-white dark:bg-slate-800; }
 
   .hubleto.component.input { @apply inline-flex justify-between items-center w-full; }
-  
+
   .hubleto.component.input input,
   .hubleto.component.input textarea,
   .hubleto.component.input select { @apply border border-slate-200 flex flex-1 rounded-sm w-full p-0.5 dark:border-slate-500; }

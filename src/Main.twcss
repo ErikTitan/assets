@@ -21,7 +21,7 @@
 
   --color-primary: #4780bf;
   --color-secondary: #41c50d;
-  
+
   --spacing-8xl: 96rem;
   --spacing-9xl: 128rem;
 
@@ -51,7 +51,7 @@
   .app-launcher-show-btn { @apply cursor-pointer border border-primary text-primary m-1 p-1 flex items-center gap-2 justify-center rounded hover:bg-primary hover:text-white; }
 
   aside#default-sidebar nav { @apply w-48 dark:bg-gray-900 dark:border-b dark:border-b-slate-700 bg-white; }
-  aside#default-sidebar .nav-inner { @apply w-48 bg-white dark:bg-gray-900 dark:border-b dark:border-b-slate-700 overflow-y-auto; }
+  aside#default-sidebar .nav-inner { @apply bg-white dark:bg-gray-900 dark:border-b dark:border-b-slate-700 overflow-y-auto; }
   aside#default-sidebar .btn { @apply hover:bg-primary/10 pl-1; }
   aside#default-sidebar .btn .icon { @apply dark:text-gray-100 text-gray-800; }
   aside#default-sidebar .btn .text { @apply dark:text-gray-100 text-gray-800; }
@@ -87,9 +87,9 @@
   .sidebar-group.activated > .btn { @apply bg-primary/20; }
   .sidebar-group.activated .sidebar-group-btns { @apply block; }
   .sidebar-group .sidebar-group-btns .btn { @apply ml-1; }
-  .sidebar-group .sidebar-group-btns .btn .icon { @apply p-0.5 text-xs mr-1 !text-slate-700; }
-  .sidebar-group .sidebar-group-btns .btn .text { @apply p-0.5 text-sm !text-slate-700; }
+  .sidebar-group .sidebar-group-btns .btn .icon { @apply p-0.5 text-xs mr-1 text-slate-700 dark:text-white; }
+  .sidebar-group .sidebar-group-btns .btn .text { @apply p-0.5 text-sm text-slate-700 dark:text-white; }
   .sidebar-group .sidebar-group-btns .btn.btn-active .icon { @apply !text-white; }
   .sidebar-group .sidebar-group-btns .btn.btn-active .text { @apply !text-white; }
-  
+
 }

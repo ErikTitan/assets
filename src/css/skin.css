@@ -18,7 +18,7 @@
   .alert-warning { @apply p-4 mb-4 text-yellow-800 rounded-lg bg-yellow-50; }
   .alert-danger { @apply p-4 mb-4 text-red-800 rounded-lg bg-red-50; }
 
-  .badge { @apply text-sm p-1 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-100 rounded inline m-0.5; }
+  .badge { @apply text-sm p-1 bg-slate-100 dark:bg-slate-700 text-slate-800 rounded inline m-0.5; }
   .badge.badge-large { @apply text-lg m-1 py-1 px-2; }
   .badge.badge-extra-large { @apply text-2xl m-1 py-1 px-2; }
   .badge.badge-small { @apply text-xs py-0.5 px-0.5 m-0; }
@@ -109,13 +109,14 @@
   .btn-list-item .icon { @apply self-center flex items-center; }
 
   .btn.btn-disabled { @apply text-gray-200; opacity: 0.5 }
-  
+
   .btn.btn-dropdown { @apply items-baseline relative; }
-  .btn.btn-dropdown > .menu { @apply cursor-default invisible absolute bg-white shadow-lg; left: 0%; top: 110%; z-index: 1; }
-  .btn.btn-dropdown > .menu > .list { @apply divide-none mt-1 bg-white shadow-xl rounded absolute; }
+  .btn.btn-dropdown > .menu { @apply cursor-default invisible absolute bg-white dark:bg-slate-700 shadow-lg; left: 0%; top: 110%; z-index: 1; }
+  .btn.btn-dropdown > .menu > .list { @apply divide-none mt-1 bg-white dark:bg-slate-700 shadow-xl rounded absolute; }
   .btn.btn-dropdown.open { @apply !bg-gray-100 !text-gray-800 !border-gray-100; }
   .btn.btn-dropdown.open > .menu { @apply !visible; }
-  .btn.btn-dropdown.open > .menu > .list .btn { @apply !text-nowrap; }
+  .btn.btn-dropdown.open > .menu > .list .btn { @apply !text-nowrap dark:bg-slate-800 dark:text-white; }
+  .btn.btn-dropdown.open > .menu > .list .btn:hover { @apply dark:bg-slate-600; }
 
   .btn-group { @apply flex divide-x rounded border border-gray-100 dark:border-gray-600; }
   .btn-group.vertical { @apply flex-col divide-y; }
@@ -215,7 +216,7 @@
   .modal.right .modal.right .modal.right .modal.right .modal.right .modal.right { @apply border-t border-t-primary; height: calc(100vh - 12em); top: 12em; }
 
   .modal.right.wide .modal.right.wide { @apply !shadow-2xl md:w-[76%]; }
-  
+
   .modal.right .modal.right .modal-header { @apply bg-primary/10; }
 
   .modal.centered { @apply fixed mx-auto md:my-4 md:w-2/3 md:h-[calc(100vh-theme(space.8))] z-50 shadow-2xl rounded border border-primary dark:border-slate-800; top: 0; left: 50%; transform: translate(-50%, 0%);}
@@ -264,7 +265,7 @@
 
   .hubleto-lookup[class*='-container'] { width: 100%; }
   .hubleto-lookup *[class*='-indicator'] { padding: 0px !important; }
-  .hubleto-lookup *[class*='-control'] { @apply !w-full rounded-sm !bg-white dark:!bg-slate-500 dark:!text-white; min-height: auto !important; }
+  .hubleto-lookup *[class*='-control'] { @apply !w-full rounded-sm !bg-white dark:!bg-white/20 dark:!border-slate-500 dark:!text-white; min-height: auto !important; }
   .hubleto-lookup *[class*='-control'] > div { padding-bottom: 0px !important; padding-top: 0px !important; }
   .hubleto-lookup *[class*='-input-container'] { @apply !p-0.5 !m-0; min-width: 2em; }
   .hubleto-lookup *[class*='-ValueContainer'] { @apply !p-0; }
@@ -272,6 +273,10 @@
   .hubleto-lookup *[class*='-Input'] { @apply !text-sm; }
   .hubleto-lookup *[class*='-menu'] * { @apply !text-sm; }
   .hubleto-lookup > div > div { @apply p-0; }
-  .hubleto-lookup > div > div > div { @apply p-0; }
+  .hubleto-lookup > div > div > div { @apply p-0 dark:!text-white; }
 
+  [id^="react-select-"][id*="-listbox"] {@apply dark:!bg-slate-800 dark:!border-slate-500 dark:!border;}
+  [id^="react-select-"][id*="-option"] {@apply dark:!bg-slate-800 dark:!text-white;}
+  [id^="react-select-"][id*="-option"][aria-selected="true"] {@apply dark:!bg-primary;}
+  [id^="react-select-"][id*="-option"]:hover {@apply dark:!bg-slate-600;}
 }

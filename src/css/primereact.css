@@ -3,14 +3,14 @@
   /* PRIMETABLE */
 
   .p-progressbar .p-progressbar-value { @apply bg-primary; }
-  .p-datatable { @apply border border-slate-200; }
+  .p-datatable { @apply border border-slate-200 dark:border-slate-600; }
   .p-datatable .p-datatable-tbody > tr > td { @apply border-gray-50 dark:border-slate-600; }
   .p-datatable .p-datatable-tbody > tr.p-highlight { @apply bg-primary/20 text-primary; }
-  .p-datatable .p-datatable-thead > tr > th { @apply p-1 dark:bg-slate-800 dark:text-white dark:border-slate-800; }
+  .p-datatable .p-datatable-thead > tr > th { @apply p-1 dark:bg-slate-800 dark:text-white dark:border-slate-600; }
   .p-datatable .p-datatable-thead > tr > th .p-sortable-column-icon { @apply scale-[0.75] dark:text-gray-400; }
-  .p-datatable .p-sortable-column.p-highlight { @apply bg-slate-100; }
-  .p-datatable .p-sortable-column.p-highlight .p-column-header-content .p-column-title { @apply text-primary; }
-  .p-datatable .p-sortable-column.p-highlight .p-column-header-content .p-sortable-column-icon { @apply text-primary; }
+  .p-datatable .p-sortable-column.p-highlight { @apply bg-slate-100 dark:bg-primary ; }
+  .p-datatable .p-sortable-column.p-highlight .p-column-header-content .p-column-title { @apply text-primary dark:text-white; }
+  .p-datatable .p-sortable-column.p-highlight .p-column-header-content .p-sortable-column-icon { @apply text-primary dark:text-white; }
   .p-datatable tr { height: 1px; }
   .p-datatable tr td { @apply dark:bg-slate-900 dark:text-white; height: inherit; vertical-align: middle; }
   .p-datatable .p-filter-column { vertical-align: top; }
@@ -51,6 +51,9 @@
   .p-paginator .p-paginator-pages .p-paginator-page { @apply border-1 border-gray-300 rounded-2xl transition-all; }
   .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover { @apply border-1 border-gray-500 bg-gray-500 text-white; }
 
+  .p-selectbutton { @apply dark:bg-slate-500;}
+  .p-selectbutton .p-button { @apply dark:bg-slate-500;}
+  .p-selectbutton .p-button[aria-pressed="true"] { @apply dark:bg-primary;}
 
   /* TREE */
   .p-tree { @apply p-0; }
