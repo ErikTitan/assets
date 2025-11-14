@@ -62,16 +62,16 @@
   div#app-main-content { @apply md:ml-48; }
 
   #app-launcher { @apply hidden fixed w-full h-full bg-white/90; z-index: 10000; top: 0; left: 0; overflow: auto; }
-  #app-launcher.visible { @apply block; }
+  #app-launcher.visible { @apply block dark:bg-slate-800; }
   #app-launcher > div { @apply m-auto p-10 flex flex-wrap gap-4; width: 75%; }
   #app-launcher > div .app-launcher-header { @apply w-full; }
-  #app-launcher > div .app-launcher-header input { @apply bg-white w-1/2 mr-2 text-lg border border-primary rounded p-2; }
-  #app-launcher > div .app-launcher-app-button { @apply text-slate-800 cursor-pointer w-1/6 bg-white shadow-sm flex flex-col border border-primary hover:bg-primary hover:text-white; }
+  #app-launcher > div .app-launcher-header input { @apply bg-white dark:bg-slate-500 dark:text-white w-1/2 mr-2 text-lg border border-primary rounded p-2; }
+  #app-launcher > div .app-launcher-app-button { @apply text-slate-600 dark:bg-slate-600 dark:text-white cursor-pointer w-1/6 bg-white shadow-sm flex flex-col border border-primary hover:bg-primary hover:text-white; }
   #app-launcher > div .app-launcher-app-button .icon { @apply p-2 text-center text-2xl; }
   #app-launcher > div .app-launcher-app-button .text { @apply p-2 text-center; }
 
   .btn-add { @apply bg-amber-600 hover:bg-amber-400; }
-  .btn-add-outline { @apply border-amber-600 text-amber-600 border-solid hover:bg-amber-600/20; }
+  .btn-add-outline { @apply border-amber-600 text-amber-600 border-solid hover:bg-amber-600/20 dark:bg-transparent; }
   .btn-edit { @apply bg-amber-600 hover:bg-amber-400; }
 
   .btn-square { @apply flex-col text-center; }
