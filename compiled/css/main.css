@@ -1036,6 +1036,9 @@
   .min-w-48 {
     min-width: calc(var(--spacing) * 48);
   }
+  .min-w-64 {
+    min-width: calc(var(--spacing) * 64);
+  }
   .min-w-\[1\.5rem\] {
     min-width: 1.5rem;
   }

@@ -190,6 +190,7 @@ class HubletoErp extends HubletoReactUi {
     value = (value ?? '').toString().replace(/[^0-9+\-Ee.]/g, '');
 
     let n = parseFloat(value);
+    if (isNaN(n)) n = 0;
 
     n = Math.round(n * Math.pow(10, decimals)) / Math.pow(10, decimals);
     let [integerPart, fractionalPart] = n.toString().split('.');
