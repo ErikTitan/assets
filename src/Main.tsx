@@ -33,6 +33,7 @@ import { Tooltip } from "primereact/tooltip";
 
 class HubletoErp extends HubletoReactUi {
   language: string = 'en';
+  currencySymbol: string = '€';
   idUser: number = 0;
   userEmail: string = '';
   isPremium: boolean = false;
@@ -235,9 +236,10 @@ class HubletoErp extends HubletoReactUi {
 }
 
 //@ts-ignore
-const main: HubletoErp = new HubletoErp(window.ConfigEnv);
+const hubleto: HubletoErp = new HubletoErp(window.ConfigEnv);
 
-globalThis.main = main;
+globalThis.main = hubleto; // deprecated
+globalThis.hubleto = hubleto;
 
 document.addEventListener('readystatechange', function() {
   if (document.readyState === 'complete') {
