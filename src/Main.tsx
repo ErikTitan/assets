@@ -250,7 +250,7 @@ document.addEventListener('readystatechange', function() {
 });
 
 document.addEventListener('keydown', function(e) {
-  console.log('keydown', e);
+  // console.log('keydown', e);
   if (e.ctrlKey && e.key === 'k') {
     globalThis.hubleto.reactElements['global-fulltext-search'].searchRef.current.focus();
     e.preventDefault();
