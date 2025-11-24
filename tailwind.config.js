@@ -3,8 +3,7 @@ module.exports = {
   darkMode: 'selector',
   content: [
     "../erp/**/*.{html,js,twig,tsx,php}",
-    "../framework/**/*.{tsx,twig}",
-    "../apps/**/*.{tsx,twig}",
+    "../framework/**/*.{tsx,twig,php}",
     "../react-ui/node_modules/primereact/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [

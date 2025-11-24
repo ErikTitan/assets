@@ -1851,22 +1851,10 @@
   .bg-primary {
     background-color: var(--color-primary);
   }
-  .bg-primary\/5 {
-    background-color: color-mix(in srgb, #4780bf 5%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-primary) 5%, transparent);
-    }
-  }
   .bg-primary\/10 {
     background-color: color-mix(in srgb, #4780bf 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
-    }
-  }
-  .bg-primary\/20 {
-    background-color: color-mix(in srgb, #4780bf 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
     }
   }
   .bg-purple-500 {
@@ -1883,6 +1871,9 @@
   }
   .bg-red-300 {
     background-color: var(--color-red-300);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
