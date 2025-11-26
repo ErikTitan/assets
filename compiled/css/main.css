@@ -838,6 +838,12 @@
   .max-h-12 {
     max-height: calc(var(--spacing) * 12);
   }
+  .max-h-16 {
+    max-height: calc(var(--spacing) * 16);
+  }
+  .max-h-24 {
+    max-height: calc(var(--spacing) * 24);
+  }
   .max-h-32 {
     max-height: calc(var(--spacing) * 32);
   }
@@ -1020,6 +1026,12 @@
   }
   .max-w-12 {
     max-width: calc(var(--spacing) * 12);
+  }
+  .max-w-16 {
+    max-width: calc(var(--spacing) * 16);
+  }
+  .max-w-24 {
+    max-width: calc(var(--spacing) * 24);
   }
   .max-w-32 {
     max-width: calc(var(--spacing) * 32);
