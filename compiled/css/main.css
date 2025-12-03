@@ -125,7 +125,6 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -5224,6 +5223,7 @@ body.ajax-loading #logo {
     color: var(--color-red-500);
   }
   .hubleto.component.table .table-cell-content {
+    position: relative;
     max-width: calc(var(--spacing) * 90);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -5253,6 +5253,15 @@ body.ajax-loading #logo {
   }
   .hubleto.component.table .table-cell-content.column-boolean {
     text-align: center;
+  }
+  .hubleto.component.table .table-cell-content .cell-buttons {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+  }
+  .hubleto.component.table .table-cell-content:hover .cell-buttons {
+    display: block;
   }
   .hubleto.component.table .table-sidebar-filter {
     display: none;

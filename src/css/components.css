@@ -31,13 +31,15 @@
   .hubleto.component.table .table-body tbody tr td .to-be-deleted { @apply bg-red-500; }
   .hubleto.component.table .table-body tbody tr td .to-be-deleted input { @apply text-red-500; }
 
-  .hubleto.component.table .table-cell-content { @apply truncate max-w-90; }
+  .hubleto.component.table .table-cell-content { @apply relative truncate max-w-90; }
   .hubleto.component.table .table-cell-content.column-lookup { @apply text-primary dark:text-white; }
   .hubleto.component.table .table-cell-content.column-int { @apply text-right font-semibold; }
   .hubleto.component.table .table-cell-content.column-float { @apply text-right font-semibold; }
   .hubleto.component.table .table-cell-content.column-date { @apply text-right; }
   .hubleto.component.table .table-cell-content.column-datetime { @apply text-right; }
   .hubleto.component.table .table-cell-content.column-boolean { @apply text-center; }
+  .hubleto.component.table .table-cell-content .cell-buttons { @apply hidden absolute; right: 0; top: 0; }
+  .hubleto.component.table .table-cell-content:hover .cell-buttons { @apply block; }
   .hubleto.component.table .table-sidebar-filter { @apply hidden md:block; }
 
   .hubleto.component.table .column-search .input-element { @apply bg-white dark:bg-slate-800; }
