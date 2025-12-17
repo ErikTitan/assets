@@ -256,33 +256,33 @@ document.addEventListener('keydown', function(e) {
     e.preventDefault();
   }
   if (e.ctrlKey && e.key === 's') {
-    const activeForm = globalThis.hubleto.getActiveFormInStack();
-    if (activeForm) {
-      activeForm.saveRecord();
+    const activeModal = globalThis.hubleto.getActiveModalInStack();
+    if (activeModal && activeModal.props.refForm && activeModal.props.refForm.current) {
+      activeModal.props.refForm.current.saveRecord();
       e.stopPropagation();
       e.preventDefault();
     }
   }
-  if (e.ctrlKey && e.shiftKey && e.key === 'ArrowRight') {
-    const activeForm = globalThis.hubleto.getActiveFormInStack();
-    if (activeForm) {
-      activeForm.openNextRecord();
-      e.stopPropagation();
-      e.preventDefault();
-    }
-  }
-  if (e.ctrlKey && e.shiftKey && e.key === 'ArrowLeft') {
-    const activeForm = globalThis.hubleto.getActiveFormInStack();
-    if (activeForm) {
-      activeForm.openPrevRecord();
-      e.stopPropagation();
-      e.preventDefault();
-    }
-  }
+  // if (e.ctrlKey && e.shiftKey && e.key === 'ArrowRight') {
+  //   const activeForm = globalThis.hubleto.getActiveModalInStack();
+  //   if (activeForm) {
+  //     activeForm.openNextRecord();
+  //     e.stopPropagation();
+  //     e.preventDefault();
+  //   }
+  // }
+  // if (e.ctrlKey && e.shiftKey && e.key === 'ArrowLeft') {
+  //   const activeModal = globalThis.hubleto.getActiveModalInStack();
+  //   if (activeModal) {
+  //     activeModal.openPrevRecord();
+  //     e.stopPropagation();
+  //     e.preventDefault();
+  //   }
+  // }
   if (e.key === 'Escape') {
-    const activeForm = globalThis.hubleto.getActiveFormInStack();
-    if (activeForm) {
-      activeForm.closeForm();
+    const activeModal = globalThis.hubleto.getActiveModalInStack();
+    if (activeModal) {
+      activeModal.close();
     }
   }
   // // if (e.code === 27) {
