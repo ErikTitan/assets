@@ -870,9 +870,6 @@
   .min-h-full {
     min-height: 100%;
   }
-  .\!w-8 {
-    width: calc(var(--spacing) * 8) !important;
-  }
   .\!w-screen {
     width: 100vw !important;
   }
@@ -960,6 +957,9 @@
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
@@ -1025,9 +1025,6 @@
   }
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
-  }
-  .max-w-64 {
-    max-width: calc(var(--spacing) * 64);
   }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
