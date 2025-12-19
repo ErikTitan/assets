@@ -257,8 +257,9 @@ document.addEventListener('keydown', function(e) {
   }
   if (e.ctrlKey && e.key === 's') {
     const activeModal = globalThis.hubleto.getActiveModalInStack();
-    if (activeModal && activeModal.props.refForm && activeModal.props.refForm.current) {
-      activeModal.props.refForm.current.saveRecord();
+
+    if (activeModal && activeModal.props.form && activeModal.props.form.current) {
+      activeModal.props.form.current.saveRecord();
       e.stopPropagation();
       e.preventDefault();
     }
