@@ -1745,6 +1745,9 @@
   .border-t-orange-300 {
     border-top-color: var(--color-orange-300);
   }
+  .border-t-slate-500 {
+    border-top-color: var(--color-slate-500);
+  }
   .border-r-gray-600 {
     border-right-color: var(--color-gray-600);
   }
