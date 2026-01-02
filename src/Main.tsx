@@ -39,17 +39,23 @@ class HubletoErp extends HubletoReactUi {
   isPremium: boolean = false;
   user: any;
   apps: any = {};
+  locale: any = {};
   dynamicContentInjectors: any = {};
 
-  constructor(config: object) {
+  constructor(config: any) {
     super(config);
 
-    this.idUser = config['idUser'];
-    this.userEmail = config['userEmail'];
-    this.isPremium = config['isPremium'];
-    this.language = config['language'];
+    this.idUser = config.idUser;
+    this.userEmail = config.userEmail;
+    this.isPremium = config.isPremium;
+    this.language = config.language;
     this.dictionary = globalThis.dictionary;
-    // this.loadDictionary(config['language']);
+    this.locale = {
+      currencySymbol: config.locale?.currencySymbol ?? '€',
+      decimalsSeparator: config.locale?.decimalsSeparator ?? '.',
+      thousandsSeparator: config.locale?.thousandsSeparator ?? ' ',
+    }
+      // this.loadDictionary(config['language']);
 
     this.registerReactComponent('Modal', Modal);
 
@@ -183,11 +189,14 @@ class HubletoErp extends HubletoReactUi {
   }
 
   numberFormat(
-    value: string,
+    value: number|string,
     decimals: number = 2,
-    decimalSeparator: string = ',',
-    thousandsSeparator: string = ' '
+    decimalsSeparator: string = '',
+    thousandsSeparator: string = ''
   ): string {
+    if (decimalsSeparator == '') decimalsSeparator = this.locale.decimalsSeparator;
+    if (thousandsSeparator == '') thousandsSeparator = this.locale.thousandsSeparator;
+  
     value = (value ?? '').toString().replace(/[^0-9+\-Ee.]/g, '');
 
     let n = parseFloat(value);
@@ -204,7 +213,14 @@ class HubletoErp extends HubletoReactUi {
       fractionalPart += '0';
     }
 
-    return integerPart + (decimals > 0 ? decimalSeparator + fractionalPart : '');
+    return integerPart + (decimals > 0 ? decimalsSeparator + fractionalPart : '');
+  }
+
+  currencyFormat(value: number|string, decimals: number = 2): string {
+    return (
+      this.numberFormat(value, decimals)
+      + ' ' + this.locale.currencySymbol
+    );
   }
 
   registerDynamicContent(contentGroup: string, injector: any) {
