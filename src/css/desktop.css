@@ -13,8 +13,9 @@
   table tr { @apply odd:bg-slate-50; }
   table tr td { @apply p-1; } */
 
-  input, select, textarea { @apply bg-white/20 border-slate-500 border rounded p-1; }
   code { @apply bg-slate-100 p-1; }
+
+  input, textarea, select { @apply border border-slate-200 flex flex-1 rounded-sm w-full p-0.5 dark:border-slate-500; }
 
   /* SPECIAL components, idetified by # id */
   aside#default-sidebar { @apply flex fixed top-0 left-0 z-10 pt-12 h-full transition-transform -translate-x-[110%] md:translate-x-0; }
