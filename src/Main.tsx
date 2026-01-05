@@ -259,9 +259,9 @@ globalThis.hubleto = hubleto;
 
 document.addEventListener('readystatechange', function() {
   if (document.readyState === 'complete') {
-    globalThis.main.init();
-    globalThis.main.renderReactElements();
-    globalThis.main.createThemeObserver();
+    globalThis.hubleto.init();
+    globalThis.hubleto.renderReactElements();
+    globalThis.hubleto.createThemeObserver();
   }
 });
 
@@ -303,7 +303,7 @@ document.addEventListener('keydown', function(e) {
     }
   }
   // // if (e.code === 27) {
-  // //   globalThis.main.reactElements['global-fulltext-search'].searchRef.current.focus();
+  // //   globalThis.hubleto.reactElements['global-fulltext-search'].searchRef.current.focus();
   // //   e.preventDefault();
   // // }
 });
