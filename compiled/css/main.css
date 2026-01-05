@@ -5192,7 +5192,7 @@ body.ajax-loading #logo {
     box-sizing: border-box;
   }
   .hubleto.component.table .table-body tr.hidden-record {
-    opacity: 20%;
+    display: none;
   }
   .hubleto.component.table .table-body tr:hover:not(.hidden-record) td {
     background-color: var(--color-gray-100);
