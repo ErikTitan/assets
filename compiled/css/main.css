@@ -1034,9 +1034,6 @@
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
   }
-  .max-w-64 {
-    max-width: calc(var(--spacing) * 64);
-  }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
   }
@@ -2383,9 +2380,6 @@
   }
   .text-red-800 {
     color: var(--color-red-800);
-  }
-  .text-secondary {
-    color: var(--color-secondary);
   }
   .text-sky-600 {
     color: var(--color-sky-600);
@@ -5195,14 +5189,12 @@ body.ajax-loading #logo {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: transparent;
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-100);
-      }
-    }
     box-sizing: border-box;
   }
-  .hubleto.component.table .table-body tr:hover td {
+  .hubleto.component.table .table-body tr.hidden-record {
+    opacity: 20%;
+  }
+  .hubleto.component.table .table-body tr:hover:not(.hidden-record) td {
     background-color: var(--color-gray-100);
     &:where(.dark, .dark *) {
       background-color: var(--color-slate-800);
@@ -5226,6 +5218,9 @@ body.ajax-loading #logo {
   }
   .hubleto.component.table .table-body tbody tr td:hover .inline-edit-icon {
     visibility: visible;
+  }
+  .hubleto.component.table .table-body tbody tr.hidden-record td {
+    font-size: 0.6em;
   }
   .hubleto.component.table .table-body tr.highlighted {
     :where(& > :not(:last-child)) {
