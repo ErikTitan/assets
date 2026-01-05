@@ -40,7 +40,6 @@ class HubletoErp extends HubletoReactUi {
   user: any;
   apps: any = {};
   locale: any = {};
-  dynamicContentInjectors: any = {};
 
   constructor(config: any) {
     super(config);
@@ -221,32 +220,6 @@ class HubletoErp extends HubletoReactUi {
       this.numberFormat(value, decimals)
       + ' ' + this.locale.currencySymbol
     );
-  }
-
-  registerDynamicContent(contentGroup: string, injector: any) {
-    if (!this.dynamicContentInjectors[contentGroup]) {
-      this.dynamicContentInjectors[contentGroup] = [];
-    }
-
-    this.dynamicContentInjectors[contentGroup].push(injector);
-  }
-
-  injectDynamicContent(contentGroup: string, injectorProps: any): Array<JSX.Element>|null {
-    if (this.dynamicContentInjectors && this.dynamicContentInjectors[contentGroup]) {
-      let dynamicContent: Array<JSX.Element> = [];
-      for (let i in this.dynamicContentInjectors[contentGroup]) {
-        dynamicContent.push(
-          React.createElement(
-            this.dynamicContentInjectors[contentGroup][i],
-            injectorProps
-          )
-        );
-      }
-      return dynamicContent;
-      // return dynamicContent.map((content, key) => <div key={key}>{content}</div>);
-    } else {
-      return null;
-    }
   }
 
 }
