@@ -15,6 +15,7 @@ import InputBoolean from "@hubleto/react-ui/core/Inputs/Boolean";
 import InputColor from "@hubleto/react-ui/core/Inputs/Color";
 import InputHyperlink from "@hubleto/react-ui/core/Inputs/Hyperlink";
 import InputUserSelect from "@hubleto/react-ui/core/Inputs/UserSelect";
+import InputSharedWith from "@hubleto/react-ui/core/Inputs/SharedWith";
 import InputWysiwyg from "@hubleto/react-ui/core/Inputs/Wysiwyg";
 import InputTextareaWithHtmlPreview from "@hubleto/react-ui/core/Inputs/TextareaWithHtmlPreview";
 import InputJsonKeyValue from "@hubleto/react-ui/core/Inputs/JsonKeyValue";
@@ -66,6 +67,7 @@ class HubletoErp extends HubletoReactUi {
     this.registerReactComponent('InputColor', InputColor);
     this.registerReactComponent('InputHyperlink', InputHyperlink);
     this.registerReactComponent('InputUserSelect', InputUserSelect);
+    this.registerReactComponent('InputSharedWith', InputSharedWith);
     this.registerReactComponent('InputWysiwyg', InputWysiwyg);
     this.registerReactComponent('InputTextareaWithHtmlPreview', InputTextareaWithHtmlPreview);
     this.registerReactComponent('InputJsonKeyValue', InputJsonKeyValue);
