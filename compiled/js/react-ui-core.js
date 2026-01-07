@@ -369,6 +369,16 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ }),
 
+/***/ "../react-ui/core/TableCellRenderers/SharedWith.tsx":
+/*!**********************************************************!*\
+  !*** ../react-ui/core/TableCellRenderers/SharedWith.tsx ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ SharedWithTableCellRenderer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"../react-ui/node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _TableCellRenderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../TableCellRenderer */ \"../react-ui/core/TableCellRenderer.tsx\");\n\n\nclass SharedWithTableCellRenderer extends _TableCellRenderer__WEBPACK_IMPORTED_MODULE_1__.TableCellRenderer {\n  render() {\n    if (this.state.data && this.state.data[this.state.columnName]) {\n      let valuesPerUser = {};\n      try {\n        valuesPerUser = JSON.parse(this.state.data[this.state.columnName]);\n      } catch (ex) {\n        valuesPerUser = {};\n      }\n      let userCount = Object.keys(valuesPerUser).length;\n      if (userCount > 0) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"i\", {\n        className: \"fas fa-share-nodes pr-2\"\n      }), \" \", userCount, \" user(s)\");else return null;\n    } else {\n      return null;\n    }\n  }\n}\n\n//# sourceURL=webpack:///../react-ui/core/TableCellRenderers/SharedWith.tsx?\n}");
+
+/***/ }),
+
 /***/ "../react-ui/core/TranslatedComponent.tsx":
 /*!************************************************!*\
   !*** ../react-ui/core/TranslatedComponent.tsx ***!

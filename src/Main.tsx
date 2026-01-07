@@ -21,6 +21,7 @@ import InputTextareaWithHtmlPreview from "@hubleto/react-ui/core/Inputs/Textarea
 import InputJsonKeyValue from "@hubleto/react-ui/core/Inputs/JsonKeyValue";
 
 import TableCellRendererHyperlink from "@hubleto/react-ui/core/TableCellRenderers/Hyperlink";
+import TableCellRendererSharedWith from "@hubleto/react-ui/core/TableCellRenderers/SharedWith";
 
 // Hubleto
 import HubletoSearch from "@hubleto/react-ui/ext/HubletoSearch";
@@ -73,6 +74,7 @@ class HubletoErp extends HubletoReactUi {
     this.registerReactComponent('InputJsonKeyValue', InputJsonKeyValue);
 
     this.registerReactComponent('TableCellRendererHyperlink', TableCellRendererHyperlink);
+    this.registerReactComponent('TableCellRendererSharedWith', TableCellRendererSharedWith);
 
     // Hubleto components
     this.registerReactComponent('Search', HubletoSearch);
