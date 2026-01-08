@@ -15978,6 +15978,9 @@ body.ajax-loading #logo {
     }
   }
   aside#default-sidebar .btn.btn-active {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-primary);
     background-color: var(--color-primary);
   }
   aside#default-sidebar .btn.btn-active .icon {
