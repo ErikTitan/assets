@@ -568,6 +568,12 @@
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-64 {
+    margin-top: calc(var(--spacing) * 64);
+  }
   .mt-\[-0\.5rem\] {
     margin-top: -0.5rem;
   }
