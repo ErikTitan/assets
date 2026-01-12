@@ -571,9 +571,6 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
-  .mt-64 {
-    margin-top: calc(var(--spacing) * 64);
-  }
   .mt-\[-0\.5rem\] {
     margin-top: -0.5rem;
   }
@@ -1069,6 +1066,9 @@
   }
   .min-w-64 {
     min-width: calc(var(--spacing) * 64);
+  }
+  .min-w-80 {
+    min-width: calc(var(--spacing) * 80);
   }
   .min-w-\[1\.5rem\] {
     min-width: 1.5rem;
