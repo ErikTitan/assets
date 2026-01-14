@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import 'primereact/resources/themes/lara-light-teal/theme.css';
 
 import { HubletoReactUi } from "@hubleto/react-ui/core/Loader";
-import HubletoApp from '@hubleto/react-ui/ext/HubletoApp'
+import App from '@hubleto/react-ui/core/App'
 import request from "@hubleto/react-ui/core/Request";
 
+// core hubleto react ui components
 import Modal from "@hubleto/react-ui/core/ModalSimple";
+import Chart from "@hubleto/react-ui/core/Chart";
+
 import InputVarchar from "@hubleto/react-ui/core/Inputs/Varchar";
 import InputInt from "@hubleto/react-ui/core/Inputs/Int";
 import InputLookup from "@hubleto/react-ui/core/Inputs/Lookup";
@@ -23,12 +26,11 @@ import InputJsonKeyValue from "@hubleto/react-ui/core/Inputs/JsonKeyValue";
 import TableCellRendererHyperlink from "@hubleto/react-ui/core/TableCellRenderers/Hyperlink";
 import TableCellRendererSharedWith from "@hubleto/react-ui/core/TableCellRenderers/SharedWith";
 
-// Hubleto
-import HubletoSearch from "@hubleto/react-ui/ext/HubletoSearch";
-import HubletoForm from "@hubleto/react-ui/ext/HubletoForm";
-import HubletoTable from "@hubleto/react-ui/ext/HubletoTable";
-import HubletoChart from "@hubleto/react-ui/ext/HubletoChart";
-import HubletoTableColumnCustomize from "@hubleto/react-ui/ext/HubletoTableColumnsCustomize";
+// extended hubleto react ui components
+import ErpSearch from "@hubleto/react-ui/ext/ErpSearch";
+import FormExtended from "@hubleto/react-ui/ext/FormExtended";
+import TableExtended from "@hubleto/react-ui/ext/TableExtended";
+import TableExtendedColumnCustomize from "@hubleto/react-ui/ext/TableExtendedColumnsCustomize";
 
 // Primereact
 import { Tooltip } from "primereact/tooltip";
@@ -77,11 +79,11 @@ class HubletoErp extends HubletoReactUi {
     this.registerReactComponent('TableCellRendererSharedWith', TableCellRendererSharedWith);
 
     // Hubleto components
-    this.registerReactComponent('Search', HubletoSearch);
-    this.registerReactComponent('Form', HubletoForm);
-    this.registerReactComponent('Table', HubletoTable);
-    this.registerReactComponent('TableColumnsCustomize', HubletoTableColumnCustomize);
-    this.registerReactComponent('Chart', HubletoChart);
+    this.registerReactComponent('Search', ErpSearch);
+    this.registerReactComponent('Form', FormExtended);
+    this.registerReactComponent('Table', TableExtended);
+    this.registerReactComponent('TableColumnsCustomize', TableExtendedColumnCustomize);
+    this.registerReactComponent('Chart', Chart);
 
     // Primereact
     this.registerReactComponent('Tooltip', Tooltip);
@@ -153,7 +155,7 @@ class HubletoErp extends HubletoReactUi {
     );
   }
 
-  registerApp(appNamespace: string, app: HubletoApp) {
+  registerApp(appNamespace: string, app: App) {
     app.namespace = appNamespace;
     this.apps[appNamespace] = app;
   }
