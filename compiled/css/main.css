@@ -780,9 +780,6 @@
   .h-56 {
     height: calc(var(--spacing) * 56);
   }
-  .h-64 {
-    height: calc(var(--spacing) * 64);
-  }
   .h-72 {
     height: calc(var(--spacing) * 72);
   }
@@ -1067,9 +1064,6 @@
   }
   .min-w-48 {
     min-width: calc(var(--spacing) * 48);
-  }
-  .min-w-64 {
-    min-width: calc(var(--spacing) * 64);
   }
   .min-w-80 {
     min-width: calc(var(--spacing) * 80);
@@ -3880,11 +3874,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .md\:grid-cols-4 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
   .md\:grid-cols-6 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -3913,11 +3902,6 @@
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
-    }
-  }
-  .lg\:grid-cols-4 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .xl\:mb-2 {
@@ -7175,6 +7159,13 @@ body #ajax-loader::before {
     border-color: var(--color-slate-200);
     &:where(.dark, .dark *) {
       border-color: var(--color-slate-700);
+    }
+  }
+  .list > .item {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-50);
+      }
     }
   }
   .list.horizontal {
