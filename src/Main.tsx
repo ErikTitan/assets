@@ -259,22 +259,22 @@ document.addEventListener('keydown', function(e) {
       e.preventDefault();
     }
   }
-  // if (e.ctrlKey && e.shiftKey && e.key === 'ArrowRight') {
-  //   const activeForm = globalThis.hubleto.getActiveModalInStack();
-  //   if (activeForm) {
-  //     activeForm.openNextRecord();
-  //     e.stopPropagation();
-  //     e.preventDefault();
-  //   }
-  // }
-  // if (e.ctrlKey && e.shiftKey && e.key === 'ArrowLeft') {
-  //   const activeModal = globalThis.hubleto.getActiveModalInStack();
-  //   if (activeModal) {
-  //     activeModal.openPrevRecord();
-  //     e.stopPropagation();
-  //     e.preventDefault();
-  //   }
-  // }
+  if (e.ctrlKey && e.shiftKey && e.key === 'PageDown') {
+    const activeModal = globalThis.hubleto.getActiveModalInStack();
+    if (activeModal && activeModal.props.form && activeModal.props.form.current) {
+      activeModal.props.form.current.openNextRecord();
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }
+  if (e.ctrlKey && e.shiftKey && e.key === 'PageUp') {
+    const activeModal = globalThis.hubleto.getActiveModalInStack();
+    if (activeModal && activeModal.props.form && activeModal.props.form.current) {
+      activeModal.props.form.current.openPrevRecord();
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }
   if (e.key === 'Escape') {
     const activeModal = globalThis.hubleto.getActiveModalInStack();
     if (activeModal) {
