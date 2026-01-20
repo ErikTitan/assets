@@ -5,12 +5,10 @@
 @layer theme, base, components, primereact, hubleto-framework, utilities, hubleto-main;
 
 @import "tailwindcss";
-@import "../../react-ui/css/desktop.css";
-@import "../../react-ui/css/components.css";
-@import "../../react-ui/css/responsive.css";
-@import "../../react-ui/css/primereact.css";
-@import "../../react-ui/css/skin.css";
-@import "../../react-ui/css/color-scales.css";
+@import "../../react-ui/css/desktop.twcss";
+@import "../../react-ui/css/components.twcss";
+@import "../../react-ui/css/primereact.twcss";
+@import "../../react-ui/css/color-scales.twcss";
 
 @import "../../react-ui/css/font-gabarito.css";
 @import "../../react-ui/css/fontawesome-6.6.css";
