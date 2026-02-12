@@ -1,17 +1,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
-@config "../tailwind.config.js";
+@config "../../tailwind.config.js";
 
 @layer theme, base, components, primereact, hubleto-framework, utilities, hubleto-main;
 
 @import "tailwindcss";
-@import "../../react-ui/css/desktop.twcss";
-@import "../../react-ui/css/components.twcss";
-@import "../../react-ui/css/primereact.twcss";
-@import "../../react-ui/css/color-scales.twcss";
+@import "../../node_modules/@hubleto/react-ui/css/desktop.twcss";
+@import "../../node_modules/@hubleto/react-ui/css/components.twcss";
+@import "../../node_modules/@hubleto/react-ui/css/primereact.twcss";
+@import "../../node_modules/@hubleto/react-ui/css/color-scales.twcss";
 
-@import "../../react-ui/css/font-gabarito.css";
-@import "../../react-ui/css/fontawesome-6.6.css";
+@import "../../node_modules/@hubleto/react-ui/css/font-gabarito.css";
+@import "../../node_modules/@hubleto/react-ui/css/fontawesome-6.6.css";
 
 @theme {
   --font-sans: 'Gabarito', 'sans-serif';
