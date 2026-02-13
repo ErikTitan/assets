@@ -1,27 +1,38 @@
 const path = require('path');
 const fs = require('fs');
 
-function loadEntriesFromRepository(folder) {
-  let entries = [];
+function findHubletoAppsInRepository(folder) {
+  let apps = [];
   if (fs.lstatSync(folder).isDirectory()) {
     fs.readdirSync(folder).forEach(function(app){
       const stat = fs.statSync(folder + '/' + app);
       const loaderEntry = folder + '/' + app + '/Loader';
       if (stat && stat.isDirectory() && fs.existsSync(loaderEntry + '.tsx')) {
-        entries.push(loaderEntry);
+        apps.push(loaderEntry);
       }
     });
   }
-  return entries;
+  console.log('Found following apps in `' + folder + '`');
+  console.log(apps);
+  return apps;
+}
+
+let mainEntries = [
+  './src/Main',
+  ...findHubletoAppsInRepository(path.resolve(__dirname, '../erp/apps')),
+];
+
+if (fs.existsSync(path.resolve(__dirname, '../enterprise/apps'))) {
+  mainEntries = [
+    ...mainEntries,
+    ...findHubletoAppsInRepository(path.resolve(__dirname, '../enterprise/apps')),
+  ]
 }
 
 module.exports = (env, arg) => {
   return {
     entry: {
-      main: [
-        './src/Main',
-        ...loadEntriesFromRepository(path.resolve(__dirname, '../erp/apps')),
-      ],
+      main: mainEntries,
     },
     output: {
       path: path.resolve(__dirname, 'compiled/js'),
