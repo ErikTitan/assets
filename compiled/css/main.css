@@ -1,4 +1,4 @@
-/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.4 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, hubleto-desktop, hubleto-components, utilities;
 @layer theme, base, components, utilities;
@@ -534,6 +534,9 @@
   .ml-8 {
     margin-left: calc(var(--spacing) * 8);
   }
+  .ml-12 {
+    margin-left: calc(var(--spacing) * 12);
+  }
   .ml-auto {
     margin-left: auto;
   }
@@ -910,7 +913,7 @@
     border-collapse: collapse;
   }
   .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
   }
   .animate-spin {
     animation: var(--animate-spin);
@@ -1941,7 +1944,7 @@
   }
   .ordinal {
     --tw-ordinal: ordinal;
-    font-variant-numeric: var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,);
+    font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
   }
   .line-through {
     text-decoration-line: line-through;
@@ -2006,14 +2009,14 @@
   }
   .blur {
     --tw-blur: blur(8px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
   .grayscale {
     --tw-grayscale: grayscale(100%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
   .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -2150,7 +2153,7 @@
     border-color: var(--color-blue-500);
   }
   .focus\:ring-1:focus {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .focus\:ring-blue-500:focus {
@@ -3615,7 +3618,11 @@ div[class^="fc-forma-"] {
           }
         }
         tbody tr {
-          &:nth-child(even) td {
+          background-color: var(--color-white);
+          &:where(.dark, .dark *) {
+            background-color: var(--color-black);
+          }
+          &:nth-child(even) {
             background-color: var(--color-gray-50);
             &:where(.dark, .dark *) {
               background-color: var(--color-slate-900);
@@ -3624,7 +3631,7 @@ div[class^="fc-forma-"] {
           &.hidden-record {
             display: none;
           }
-          &:hover:not(.hidden-record) td {
+          &:hover:not(.hidden-record) {
             background-color: var(--color-gray-100);
             &:where(.dark, .dark *) {
               background-color: var(--color-slate-800);
@@ -3666,13 +3673,9 @@ div[class^="fc-forma-"] {
             border-right-style: var(--tw-border-style);
             border-right-width: 1px;
             border-right-color: var(--color-gray-100);
-            background-color: var(--color-white);
             padding: calc(var(--spacing) * 0.5);
             &:where(.dark, .dark *) {
               border-right-color: var(--color-gray-800);
-            }
-            &:where(.dark, .dark *) {
-              background-color: var(--color-black);
             }
             &:where(.dark, .dark *) {
               color: var(--color-white);
@@ -3843,6 +3846,7 @@ div[class^="fc-forma-"] {
       .value-element {
         margin-right: var(--spacing);
         display: inline-flex;
+        min-width: 0px;
         flex: 1;
         align-items: center;
         padding-right: var(--spacing);
@@ -3850,6 +3854,16 @@ div[class^="fc-forma-"] {
           color: var(--color-white);
         }
         min-height: 1.5rem;
+      }
+      .value-element > .btn {
+        max-width: 100%;
+        min-width: 0px;
+      }
+      .value-element > .btn .text {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .input-element {
         display: flex;
@@ -6423,7 +6437,7 @@ div[class^="fc-forma-"] {
   }
 }
 @layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
