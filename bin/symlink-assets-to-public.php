@@ -8,7 +8,6 @@ $links = [
     $root . '/vendor/hubleto/assets/public',
     $root . '/public/assets',
   ],
-  // Add more symlinks here
 ];
 
 foreach ($links as [$target, $link]) {
