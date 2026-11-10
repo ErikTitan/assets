@@ -9,23 +9,27 @@ export default async (env) => {
   const logRed = (s) => console.log('\x1b[31m%s\x1b[0m', s);
 
   logCyan('HUBLETO ASSETS COMPILER');
+  logCyan('');
 
   let loaderFullPath = path.resolve(process.cwd(), env.loader ?? 'assets.config.js');
   if (!fs.existsSync(loaderFullPath)) {
     loaderFullPath = path.resolve(process.cwd(), 'vendor', 'hubleto', 'assets', 'assets.config.js');
   }
-  logYellow('Configuration file: ' + loaderFullPath);
+  logYellow('CONFIG');
+  logYellow(loaderFullPath);
 
   const loader = await import(pathToFileURL(loaderFullPath).href);
 
   const { entries, outputPath, aliases, modules } = loader.init();
 
-  logGreen('');
-  logGreen('entries = ' + Object.keys(entries).join(', '));
-  logGreen('');
-  logGreen('outputPath = ' + outputPath);
-  logGreen('');
-  logGreen('');
+  logYellow('');
+  logYellow('ENTRIES');
+  logYellow(Object.keys(entries).join(', '));
+  logYellow('');
+  logYellow('OUTPUT_PATH');
+  logYellow(outputPath);
+  logYellow('');
+  logYellow('');
 
   return {
     entry: entries,
@@ -44,7 +48,14 @@ export default async (env) => {
         {
           test: /\.(scss|css)$/,
           use: ['style-loader', 'css-loader', 'sass-loader'],
-        }
+        },
+        {
+          test: /\.m?js$/,
+          include: /node_modules[\\/]@uiw/,
+          resolve: {
+            fullySpecified: false,
+          },
+        },
       ],
     },
     optimization: {
@@ -57,7 +68,7 @@ export default async (env) => {
       },
     },
     resolve: {
-      modules: modules,
+      modules: ['node_modules', ...(modules ?? [])],
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css'],
       alias: aliases,
     }
