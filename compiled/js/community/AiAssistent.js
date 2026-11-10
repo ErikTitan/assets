@@ -31,7 +31,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Co
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(moduleId))
 /******/ __webpack_require__.O(0, ["react-ui"], () => (__webpack_exec__("../erp/apps/AiAssistent/Loader.tsx")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }

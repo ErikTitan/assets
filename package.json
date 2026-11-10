@@ -25,7 +25,9 @@
     "sass-loader": "^17",
     "style-loader": "^4",
     "tailwindcss": "^4",
-    "webpack": "^5",
-    "webpack-cli": "^7"
+    "webpack": "^5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^7.3.1"
   }
 }

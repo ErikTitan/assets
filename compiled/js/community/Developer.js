@@ -20,7 +20,7 @@ eval("{// How to add any React Component to be usable in Twig templates as '<hbl
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(moduleId))
 /******/ var __webpack_exports__ = (__webpack_exec__("../erp/apps/Developer/Loader.tsx"));
 /******/ }
 ]);
